@@ -163,4 +163,44 @@ int main() {
     cout << endl << endl ;
 
 
+    // DTP IS BOOL
+
+    if ( 3<5 ) {
+        cout << "qwerty" << endl;
+    } else {
+        cout << "keypad" << endl;
+    }
+
+    cout << endl << endl ;
+
+    if ( 3>5 ) {
+        cout << "qwerty" << endl;
+    } else {
+        cout << "keypad" << endl;
+    }
+
+
+    cout << endl << endl ; 
+
+
+    if ( num1 < 0 ) {
+        cout << "negative" << endl;
+    } else if ( num1 > 0 ) {
+        cout << "positive" << endl;
+    } else {
+        cout << "0" << endl;
+    }
+
+
+    cout << endl << endl ;    
+
+
+    if ( num1*num2 < 0 ) {
+        cout << "either of numbers is negative" << endl;
+    } else {
+        cout << "both numbers either +ve or -ve" << endl;
+    }
+
+
+    cout << endl << endl ;    
 }
