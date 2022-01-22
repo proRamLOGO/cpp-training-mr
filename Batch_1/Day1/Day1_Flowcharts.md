@@ -15,3 +15,8 @@
 13. Flowchart to find if a number is prime or composite.
 14. Flowchart to find Roots of Quadratic Equations Ax^2+Bx+C=0.
 15. Flowchart to generate first n Fibonacci terms 0,1,1,2,3,5…n (n>2).
+
+
+1a C++ Code to find Simple Interest.
+1b C++ Code to find the smallest of two numbers.
+2  Flowchart to find sum of series "1+3+5+…..+N". N is positive odd Integer.
