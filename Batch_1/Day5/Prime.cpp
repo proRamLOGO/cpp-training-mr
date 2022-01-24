@@ -28,10 +28,12 @@ int main() {
     if ( isPrime==true ) {
         cout << "PRIME      " << counter << endl;
     }
+
+
     cout << endl << endl;
 
-
     // APPROACH 2   n/2 ops -----------------------------
+
     isPrime = true;
 
     for ( d = 2, counter = 0 ;   ( (d <= n/2) && isPrime )    ; d++, counter++ ) {
@@ -44,8 +46,11 @@ int main() {
     if ( isPrime==true ) {
         cout << "PRIME      " << counter << endl;
     }
+
+
+
     cout << endl << endl;
-    
+
     //                _
     // APPROACH 3   _/n ops -----------------------------
 
@@ -55,6 +60,26 @@ int main() {
         if ( n%d == 0  ) {
             isPrime = false;
             cout << "NOT PRIME      " << counter << endl;
+        } 
+    }
+
+    if ( isPrime==true ) {
+        cout << "PRIME      " << counter << endl;
+    }
+
+
+    cout << endl << endl;
+
+    //                _
+    // APPROACH 3.1   _/n ops -----------------------------
+
+    isPrime = true;
+
+    for ( d = 2, counter = 0 ;  d*d <= n  ; d++, counter++ ) {
+        if ( n%d == 0  ) {
+            isPrime = false;
+            cout << "NOT PRIME      " << counter << endl;
+            break;
         } 
     }
 
