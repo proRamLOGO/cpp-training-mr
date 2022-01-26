@@ -23,7 +23,21 @@ char getChar(int idx) {
 // n, last idx = n-1
 char findMaxOccChar(string s) {
 
-    int freq[26];
+    int freq[26] = {0} ; // INIT ARRAY WITH 0 METHOD
+
+    // INIT ARRAY WITH ANY VALUE MENTHOD
+    // for ( int i = 0 ; i < 26 ; i++)
+    //     freq[i] = 0;
+
+    for ( int i = 0 ; i < 26 ; i++)
+        cout <<freq[i]<<' ';
+    
+    // for ( int i=0 ; i<s.length() ; i++ ) {
+    //     // cout << i << ' ';
+    //     freq[s[i]-'a']++;
+    // }
+    // cout << endl;
+    // freq table has been created.
 
     for ( char i:s ) {
         cout << i << ' ';
@@ -32,9 +46,9 @@ char findMaxOccChar(string s) {
     cout << endl;
     // freq table has been created.
 
-
     int ansIdx = 0; // stores position/index of max occ char
     for ( int i = 0 ; i < 26 ; i++ ) {
+        // cout << (char)(i+97) << "  :  " << freq[i] << endl;
         if ( freq[ansIdx] < freq[i] ) {
             ansIdx = i;
         }
