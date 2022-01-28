@@ -9,10 +9,17 @@ int main() {
     int n;
     cin >> n;
     int arr[n];
+    
 
     for ( int i = 0 ; i < n ; i++ ) {
         cin >> arr[i];
     }
+
+    // int i;
+    // for ( i = 0 ; i < n ; i++ ) {
+    //     cin >> arr[i];
+    // }
+    
 
     // for ( int i = 1 ; i < n ; i++) {
     //     if ( arr[0] < arr[i] )
@@ -26,8 +33,9 @@ int main() {
     int ans = arr[0];
 
     for ( int i = 0 ; i < n ; i++) {
-        if ( ans < arr[i] )
+        if ( ans < arr[i] ) {
             ans = arr[i];
+        }
     }
 
     cout << ans << endl << endl;
@@ -41,6 +49,30 @@ int main() {
     
     // ans = 0 
     // i = 0 -> 1 -> 2 -> 3
+
+
+    // if (ans<3)
+    //     if (ans<2 )
+    //         cout << "CLIK";
+    //     else 
+    //         cout << "HACK";
+
+
+    // if (ans<3) {
+    //     if (ans<2 ){
+    //         cout << "CLIK";
+    //     } else {
+    //         cout << "HACK";
+    //     }
+    // }
+
+    // if (ans<3){
+    //     if (ans<2 ){
+    //         cout << "CLIK";
+    //     }
+    // } else {
+    //     cout << "HACK";
+    // }
 
 
 

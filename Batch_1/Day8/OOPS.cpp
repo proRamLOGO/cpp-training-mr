@@ -44,7 +44,9 @@ public: // private by default
         // mycar->fuel -= 0.5*5;
     }
 
-
+    void setColor(string color) {
+        this->color = color;
+    }
 
 };
 

@@ -67,19 +67,32 @@ int getIdx(char c) {
     return c-'a';
 
 }
+// n, last idx = n-1
 
 bool isPanagram(string s) {
 
     bool isChar[26];
 
+    // for ( int i = 0 ; i <= s.length()-1 ; i++ ) {
     for ( int i = 0 ; i < s.length() ; i++ ) {
         char c = s[i];
         int idx = getIdx(c);
         isChar[idx] = true;
     }
 
+    for ( int i = 0 ; i < 26 ; i++ ) {
+        if ( !isChar[i] ) {
+            return false;
+        }
+    }    
+
+
     for ( char c = 'a' ; c != 'z' ; c++ ) {
         if ( !isChar[getIdx(c)] ) {
+        // if ( !isChar[getIdx('a')] ) {
+        // if ( !isChar[0] ) {
+        // if ( !false ) {
+        // if ( true ) {
             return false;
         }
     }    

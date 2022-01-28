@@ -21,22 +21,5 @@ int main() {
         cout << arr[i] << ' ';
     }
 
-    bool sumfound = false;
-    for ( int i = 0 ; i < n ; i++ ) {
-        for ( int j = i+1 ; j<n ; ++j ) {
-            if ( arr[i]+arr[j] == k) {
-                sumfound = true;
-                cout << arr[i] << '+' << arr[j] << '=' << k << endl;
-                break;
-            }
-        }
-        if ( sumfound) {
-            break;
-        }
-    }
-
-    if ( !sumfound ) {
-        cout << "NO NUMS" << endl;
-    }
-
+    
 }
