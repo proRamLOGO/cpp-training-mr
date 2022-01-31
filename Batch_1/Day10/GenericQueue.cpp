@@ -1,23 +1,27 @@
 #include <iostream>
 using namespace std;
 
+template<typename t>
 class Node {
 public:
-    int data;
-    Node *next;
-    Node(int data) {
+    t data;
+    Node<t> *next;
+    Node(t data) {
         this->data = data;
         this->next = nullptr;
     }
-    Node(int data, Node *next) {
+    Node(t data, Node<t> *next) {
         this->data = data;
         this->next = next;
     }
 };
+
+
+template<typename t>
 class Queue {
 
 private:
-    Node *front, *rear;
+    Node<t> *front, *rear;
     int size;
 
 public:
@@ -27,18 +31,18 @@ public:
         this->size = 0;
     }
 
-    int getFront(){
+    t getFront(){
         if ( size==0 ) {
-            cout << "UNDERFLOW\n";
-            return -1;
+            // cout << "UNDERFLOW\n";
+            return '#';
         }
         return this->front->data;
     }
 
-    int getRear(){
+    t getRear(){
         if ( size==0 ) {
-            cout << "UNDERFLOW\n";
-            return -1;
+            // cout << "UNDERFLOW\n";
+            return '#';
         }
         return this->rear->data;
     }
@@ -50,7 +54,7 @@ public:
     bool pop() {
         if ( size==0 ) {
             // If we popped from sz 0 linked list.
-            cout << "UNDERFLOW\n";
+            // cout << "UNDERFLOW\n";
             return false; // NOT SUCCESSFULL
         }
 
@@ -64,14 +68,14 @@ public:
         return true;  // SUCCESSFULL
     }
 
-    bool push(int data) {
+    bool push(t data) {
 
         if ( this->size == 0 ) {
             // IF QUEUE IS EMPTY , i.e. F and R are at nullptr
-            this->front = new Node(data);
+            this->front = new Node<t>(data);
             this->rear = this->front;
         } else {
-            this->rear->next = new Node(data);
+            this->rear->next = new Node<t>(data);
             this->rear = this->rear->next;
         }
         this->size++;
@@ -81,5 +85,36 @@ public:
 
 };
 
+int main() {
+
+    string s;
+    cin >> s;
+
+    int freq[26] = {0};
+
+    Queue<char> queue;
+
+    for ( char ch:s ) {
+
+        freq[ch-'a']++;
+        
+        if ( freq[ch-'a'] == 1 ) {
+            queue.push(ch);
+        }
+
+        while ( queue.getSize() > 0 && freq[ queue.getFront() - 'a' ] > 1  )
+            queue.pop();
+        
+        if ( queue.getFront() == -1 )
+            cout << '#';
+        else {
+            cout << queue.getFront();
+        }
+
+    }
+
+    cout << endl;
+
+}
 
 // abacbddce
