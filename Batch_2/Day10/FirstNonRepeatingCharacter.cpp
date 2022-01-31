@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-
+    cout << endl << endl;
     string s;
     cin >> s;
 
@@ -28,6 +28,7 @@ int main() {
 
     }
 
+    cout << endl << endl;
     cout << endl;
 
 }
