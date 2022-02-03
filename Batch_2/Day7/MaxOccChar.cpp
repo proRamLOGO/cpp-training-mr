@@ -18,6 +18,9 @@ int getIdx(char ch) {
 
 char findMaxOccChar_avinash(string s) {
 
+    // Time: n*n
+    // Space : 1
+
     int ansf = 1;
     char ansch = s[0];
 
@@ -50,7 +53,8 @@ char findMaxOccChar_shubh(string s) {
 
     int counter = 0;
 
-    // 26*n
+    // time: n
+    // space: 1
     for ( char ch = 'a' ; ch <= 'z' ; ch++ ) { // 26 times
         int freq = 0;
         for ( int j = 0 ; j < s.length() ; j++ ) { // n times
@@ -72,6 +76,10 @@ char findMaxOccChar_shubh(string s) {
 
 
 char findMaxOccChar_proRam(string s) {
+
+
+    // time: n
+    // space: 1
 
     int freq[26], counter = 0;
 

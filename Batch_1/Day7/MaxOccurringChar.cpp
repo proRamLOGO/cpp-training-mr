@@ -22,6 +22,9 @@ char getChar(int idx) {
 
 // n, last idx = n-1
 char findMaxOccChar(string s) {
+    // TIME: O(n) 
+    // SPACE: O(1)
+
 
     int freq[26] = {0} ; // INIT ARRAY WITH 0 METHOD
 

@@ -7,7 +7,7 @@ int main() {
     // SYNTAX FOR ARRAYS
     // DTP name[ size ];
 
-    // Q. Given an array and a number k, find if 2 numbers have sum equal to k.
+    // Q. Given a number n, input n numbers and print the n numbers.
 
     int n,k;
     cin >> n >> k;

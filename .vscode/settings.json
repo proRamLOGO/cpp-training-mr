@@ -9,6 +9,12 @@
         "ios": "cpp",
         "__locale": "cpp",
         "__string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "streambuf": "cpp",
+        "istream": "cpp",
+        "queue": "cpp",
+        "__config": "cpp",
+        "stack": "cpp",
+        "vector": "cpp"
     }
 }
