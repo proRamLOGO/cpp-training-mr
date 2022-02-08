@@ -15,6 +15,7 @@
         "queue": "cpp",
         "__config": "cpp",
         "stack": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "utility": "cpp"
     }
 }
