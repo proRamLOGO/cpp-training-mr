@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<queue>
 using namespace std;
 // Q. Given an undirected unweighted graph with n number of nodes and e edges, kindly store it. 
 
@@ -15,6 +16,45 @@ using namespace std;
 // 2 4
 // 3 4
 // 4 0
+
+void dfs( vector<vector<int> > &adjList, int source, vector<bool> &vis ) {
+
+    vis[source] = true;
+    cout << source << ' ';
+
+    for ( int neighbour: adjList[source] ) {
+        if ( !vis[neighbour] ) {
+            dfs(adjList, neighbour, vis);
+        }
+    }
+
+}
+
+void bfs( vector<vector<int> > &adjList) {
+
+    int n = adjList.size();
+    vector<bool> vis(n);
+    queue<int> q;
+
+    q.push(3);
+    vis[3] = true;
+
+    while ( !q.empty() ) {
+
+        int vertex = q.front(); q.pop();
+
+        cout << vertex << ' ';
+
+        for ( int neighbour : adjList[vertex] ) {
+            if ( !vis[neighbour] ) {
+                vis[neighbour] = true;
+                q.push(neighbour);
+            }
+        }
+
+    }
+
+}
 
 int main() {
 
@@ -47,6 +87,21 @@ cout << endl << endl;
         }
         cout << endl;
     }
+
+cout << endl << endl;
+
+    cout << "DFS is :   ";
+
+    vector<bool> vis(n);
+    dfs(adjList,4,vis);
+
+
+cout << endl << endl;
+
+    cout << "BFS is :   ";
+
+    bfs(adjList);
+
 
 cout << endl << endl;
 }
